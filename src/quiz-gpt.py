@@ -1,4 +1,13 @@
 from rich.console import Console
 
 console = Console()
-console.print("Hello, World!")
+
+
+def main():
+    console.clear()
+
+    titulo = "[bold purple]QUIZ GPT[/bold purple]"
+    console.print(f"Bem vindo ao {titulo} ?")
+
+
+main()
