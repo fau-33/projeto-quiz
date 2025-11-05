@@ -45,6 +45,6 @@ Você precisará ter instalado:
 Abra seu terminal ou prompt de comando e clone o projeto:
 
 ```bash
-git clone [LINK_DO_SEU_REPOSITORIO]
-cd [NOME_DA_PASTA_DO_PROJETO] # Ajuste o caminho, se necessário
+git clone [https://github.com/fau-33/projeto-quiz]
+cd [projetos/projeto-quiz] # Ajuste o caminho, se necessário
 ```
