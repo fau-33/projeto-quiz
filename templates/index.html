@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz GPT | Inteligência Artificial Premium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1 class="logo">Quiz <span class="neon-text">GPT</span></h1>
+            <div id="score-container" class="glass-panel mini-stats">
+                <span>Pontos: <strong id="score-val">0</strong></span>
+            </div>
+        </header>
+
+        <!-- Tela Inicial -->
+        <section id="setup-screen" class="glass-panel main-card active">
+            <h2>Sobre o que você quer aprender hoje?</h2>
+            <p>Digite um tema e nossa IA criará um quiz personalizado para você.</p>
+            
+            <div class="input-group">
+                <input type="text" id="topic-input" placeholder="Ex: História do Brasil, Astronomia, JavaScript..." autofocus>
+                <button id="start-btn" class="btn-primary">Iniciar Quiz</button>
+            </div>
+        </section>
+
+        <!-- Tela de Carregamento -->
+        <section id="loading-screen" class="glass-panel main-card">
+            <div class="loader"></div>
+            <p>Gerando pergunta com Gemini IA...</p>
+        </section>
+
+        <!-- Tela do Quiz -->
+        <section id="quiz-screen" class="glass-panel main-card">
+            <div class="quiz-header">
+                <div class="progress-bar">
+                    <div id="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <h3 id="question-text">A pergunta aparecerá aqui?</h3>
+            
+            <div id="options-container" class="options-grid">
+                <!-- Botões gerados via JS -->
+            </div>
+
+            <div id="feedback" class="feedback-msg"></div>
+            
+            <button id="next-btn" class="btn-secondary hidden">Próxima Pergunta</button>
+        </section>
+
+        <!-- Tela Final -->
+        <section id="finish-screen" class="glass-panel main-card">
+            <h2>Fim do Quiz!</h2>
+            <div class="final-score-circle">
+                <span id="final-score-val">0</span>
+                <small>pontos</small>
+            </div>
+            <p id="final-msg">Parabéns pelo seu desempenho!</p>
+            <button id="restart-btn" class="btn-primary">Novo Tópico</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Quiz GPT • Desenvolvido com IA</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

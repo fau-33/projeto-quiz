@@ -1,0 +1,6 @@
+google-genai
+rich
+python-dotenv
+flask
+flask-cors
+gunicorn

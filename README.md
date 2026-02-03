@@ -40,11 +40,39 @@ Você precisará ter instalado:
 - **Python 3.10+**
 - Uma **Chave de API do Gemini** (você pode obtê-la gratuitamente no [Google AI Studio](https://ai.google.dev/)).
 
-#### 2. Clonagem do Repositório
+#### 2. Instalação
 
-Abra seu terminal ou prompt de comando e clone o projeto:
+Abra seu terminal na raiz do projeto e siga estes passos:
+
+1. **(Opcional) Crie um ambiente virtual:**
+
+   ```bash
+   python -m venv venv
+   .\venv\Scripts\activate  # No Windows
+   source venv/bin/activate  # No Linux/Mac
+   ```
+
+2. **Instale as dependências:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+#### 3. Configuração
+
+1. Certifique-se de que o arquivo `.env` na raiz do projeto contenha sua chave de API:
+   ```env
+   GEMINI_API_KEY="SUA_CHAVE_AQUI"
+   ```
+   _(Um arquivo `.env` de exemplo já está presente na pasta `src`, mas recomenda-se mantê-lo na raiz)._
+
+#### 4. Execução
+
+Para iniciar o quiz, execute o seguinte comando:
 
 ```bash
-git clone [https://github.com/fau-33/projeto-quiz]
-cd [projetos/projeto-quiz] # Ajuste o caminho, se necessário
+python src/quiz-gpt.py
 ```
+
+---
+
+Desenvolvido por **Flávio Félix**.
